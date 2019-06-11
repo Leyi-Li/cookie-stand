@@ -8,7 +8,8 @@ h1{
 header{
     left: 200px;
 }
-
+/*animation
+*/
 .fishPic{
     position: relative;
     animation: slidein 3s linear infinite running;
