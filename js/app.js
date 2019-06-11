@@ -2,14 +2,16 @@
 
 //basic infor
 var time =['6AM','7AM','8AM','9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM','6PM','7PM','8PM',];
-var cookiesNumArr = [];
+
 //function to create Location objects
 function Location(name, minGuest, maxGuest, avgCookies){
+  
   this.name = name;
   this.minGuest = minGuest;
   this.maxGuest = maxGuest;
   this.avgCookies = avgCookies;
-  this.cookiesNum = function(timeList){
+  Location.cookiesNum = function(timeList){
+    var cookiesNumArr = [];  
     for (var i = 0; i < timeList.length; i++){
       var newCookie = Math.floor(Math.random()*(this.maxGuest-this.minGuest) + this.minGuest) * this.avgCookies;
       cookiesNumArr[i]=newCookie;
@@ -17,13 +19,13 @@ function Location(name, minGuest, maxGuest, avgCookies){
     }
     return cookiesNumArr;
   };
-  this.totalCookies = function(cookiesNumArr){
+  Location.totalCookies = function(cookiesNumArr){
     for(var i = 0; i < cookiesNumArr.length; i++){
-      var totalCookies = 0;
-      totalCookies += cookiesNumArr[i];
+      var totalCookie = 0;
+      totalCookie += cookiesNumArr[i];
     }
   };
-  this.listOfLocation = [].push(this);
+  Location.listOfLocation = [].push(this);
 }
 
 //function to create elements into the table
@@ -40,6 +42,42 @@ Location.prototype.render = function(){
   }
 
 };
+
+Location.prototype.addHeader = function(){
+  var tableHeader = document.getElementById('tHeader');
+  var tableHead = document.createElement('th');
+  tableHead.textContent = '';
+  tableHeader.appendChild(tableHead);
+  for (var i = 0; i < time.length; i++){
+    tableHead = document.createElement('th');
+    tableHead.textContent = time[i];
+    tableHeader.appendChild(tableHead);
+  }
+};
+var totalCookiesHArr = [];
+Location.prototype.totalCookiesHrly = function(Location.listOfLocation,Location.cookiesNum){
+    var totalCookiesH = 0;
+    
+    for(var y=0; y < Location.cookiesNum.length; y++){
+    for(var x=0; x < Location.listOfLocation.length; x++){
+        totalCookiesH += Location.listOfLocation[x].cookiesNum[y];
+    }
+    totalCookiesHArr.push(totalCookiesH); 
+  }
+}
+
+Location.prototype.addFooter = function(){
+    var tableFooter = document.getElementById('tFooter');
+    var cell = document.createElement('td');
+    cell.textContent = 'total';
+    tableFooter.appendChild(cell);
+    for(var i=0; i < totalCookiesHArr.length; i++ ){
+        cell= documtn.createElement('td');
+        cell.textContent = totalCookiesHArr[i];
+        tableFooter.appendChild(cell);
+    }
+    
+}
 
 
 // var firstLocation = {
