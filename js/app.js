@@ -17,7 +17,7 @@ function Location (name, minGuest, maxGuest, avgCookies){
   this.cookiesNum(time);
   this.totalCookies();
   this.render();
-  
+
 
 }
 Location.listOfLocation=[];
@@ -37,10 +37,10 @@ Location.prototype.totalCookies = function(){
     this.totalCookiesAdd += this.cookiesNumArr[i];
   }
 };
-console.log(this.totalCookiesAdd);
+
 //function to create elements into the table
 Location.prototype.render = function(){
-  
+
   var tableBody = document.getElementById('cookiesTable');
   var tableRow = document.createElement('tr');
   var cell = document.createElement('td');
@@ -78,16 +78,16 @@ function addHeader(){
 var totalCookiesH = 0;
 var totalCookiesHArr = [];
 //for all the locations, how many cookies are sold hourly.
- function totalCookiesHrly(){
-  
- for(var y=0; y < time.length; y++){
-     totalCookiesH = 0;
+function totalCookiesHrly(){
+
+  for(var y=0; y < time.length; y++){
+    totalCookiesH = 0;
     for(var x=0; x < Location.listOfLocation.length; x++){
       totalCookiesH += Location.listOfLocation[x].cookiesNumArr[y];
     }
     totalCookiesHArr.push(totalCookiesH);
   }
-};
+}
 
 //function to add footers into the table
  function addFooter(){
@@ -103,15 +103,15 @@ var totalCookiesHArr = [];
   }
   var total=0;
   for(var x=0; x<Location.listOfLocation.length;x++){
-      
-      total += Location.listOfLocation[x].totalCookiesAdd;
+
+    total += Location.listOfLocation[x].totalCookiesAdd;
 
   }
   cell= document.createElement('td');
   cell.textContent = total;
   tableFoot.appendChild(cell);
   tableFooter.appendChild(tableFoot);
-};
+}
 
 new Location('1st and Pike', 23, 65, 6.3);
 new Location('SeaTac Airport', 3, 24, 1.2);
