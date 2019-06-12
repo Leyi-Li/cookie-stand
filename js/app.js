@@ -107,9 +107,7 @@ function addFooter(){
 
     total += Location.listOfLocation[x].totalCookiesAdd;
     console.log(Location.listOfLocation[x].totalCookiesAdd,total);
-  }
-  
-  
+  } 
   cell= document.createElement('td');
   cell.textContent = total;
   tableFoot.appendChild(cell);
@@ -121,12 +119,11 @@ new Location('SeaTac Airport', 3, 24, 1.2);
 new Location('Seattle Center', 11, 38, 3.7);
 new Location('Capitol Hill', 20, 38, 2.3);
 new Location('Alki', 2, 16, 4.6);
-console.log(Location.listOfLocation);
+
 
 
 addHeader();
 totalCookiesHrly();
-console.log(totalCookiesHArr);
 addFooter();
 
 
@@ -152,12 +149,9 @@ form.addEventListener('submit', function(event){
 
   new Location(locationNameInput, minGuestInput, maxGuestInput, avgCookiesInput);
 
-//   var clearCookiesTable = document.getElementById(cookiesTable);
-//   clearCookiesTable.innerHTML = 'table deleted';
-//   addHeader();
+
 
   totalCookiesHrly();
-//   console.log(totalCookiesHArr);
   var tFooter = document.getElementById('tFooter');
   tFooter.deleteRow(0);
   addFooter();
