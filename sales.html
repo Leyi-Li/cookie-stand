@@ -1,8 +1,8 @@
 <DOCTYPE! html>
 <head>
     <title>Sam's cookie</title>
-    <link rel='stylesheet' href="./style/style.css">
-    <link rel='stlesheet' href='./style/reset.css'>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stlesheet" href="./style/reset.css">
 </head>
 
 <body>
@@ -13,22 +13,35 @@
     <main>
         <div>
             <table>
-                <thead id='tHeader'>
+                <thead id="tHeader">
 
                 </thead>
 
-                <tbody id='cookiesTable'>
+                <tbody id="cookiesTable">
 
                 </tbody>
 
-                <tfoot id = 'tFooter'>
+                <tfoot id = "tFooter">
 
                 </tfoot>
             </table>    
-        </div>            
+        </div>    
+        
+        <div>
+            <form id="cookieForm">
+                <fieldset>
+                    <legend>Build a new store</legend>
+                    <input id = "locationName" name="locationName" type="text" placeholder="type the new location's name here" />
+                    <input id = "minGuest" name="minGuest" type="number" placeholder="Please enter a number" />
+                    <input id="maxGuest" name="maxGuest" type="number" placeholder="Please enter a number" />
+                    <input id = "avgCookies" name="avgCookies" type="number" placeholder="Please enter a number" />     
+                    <input id ="submit" name="submit" type="submit" value="submit" />               
+                </fieldset>
+            </form>
+        </div>
 
 
-        <script type='text/javascript' src='./js/app.js'></script>
+        <script type="text/javascript" src="./js/app.js"></script>
     </main>
 
     <footer></footer>
