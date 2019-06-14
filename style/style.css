@@ -22,7 +22,7 @@ h1{
 
 header{
     left: 200px;
-    height:200px;
+    height:100px;
 }
 
 .fishPic{
@@ -147,4 +147,11 @@ footer{
     }
 footer>img{
     width: 150px;
+}
+
+table{
+    position: relative;
+    text-align: center;
+    font-size:30px;
+    left: 40px;
 }
