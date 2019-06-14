@@ -129,6 +129,14 @@ h3{
     font-size: 1.3em;
 }
 
+#sales>ul{
+    list-style: none;
+}
+
+.jumpingFish{
+    height:40px;
+}
+
 
 footer{
     position: absolute;;
