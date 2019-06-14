@@ -1,25 +1,150 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightsalmon;
+}
+
+main{
+    position: relative;
+    top:300px;
+}
 h1{
     font-size:4em;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+    border-style: double;
+    border-color: whitesmoke;
+    border-width: 50px;
 }
 
 header{
     left: 200px;
+    height:200px;
 }
-/*animation
-*/
+
 .fishPic{
     position: relative;
-    animation: slidein 3s linear infinite running;
+    animation: slidein 10s linear infinite running;
 }
 
 @keyframes slidein { 
     0% {
         left: 0px;
     }
-    100% { 
-        left: 100px;
+    15% {
+        left: 250px;
     }
+    30% {
+        left:500px;
+    }
+    60% {
+        left:750px;
+    }
+    75% { 
+        left: 900px;
+    }
+    90% { 
+        left: 1150px;
+    }
+    100% {
+        left: 1400px;
+    }
+}
+
+
+
+nav{
+    position:relative;
+    top:300px;
+    background-color:none;
+    margin:50px;
+    padding:20px;
+    background-color: rgba(103, 117, 117, 0.596);
+}
+
+nav>ul{
+    text-align: right;
+    background-color:rgba(103, 117, 117, 0.596);
+}
+
+nav>ul>li{
+    font-size:20px;
+    display:inline-block;
+    margin-right:100px;
+}
+nav>ul>li:hover{
+    font-size: 30px;
+}
+a{
+    color:white;   
+}
+
+
+.sideBar{
+    width:150px;
+    float:right;
+    top: 500px;
+    border-style: dotted;
+    border-color: whitesmoke;
+}
+
+h2{
+    font-size:3em;
+    margin:10px;
+}
+
+#about{
+    position: relative;
+    text-align: center;
+}
+
+.aboutUs{
+    font-size: 1.3em;
+    width:500px;
+    display: inline-block;
+    text-align: center;
+    margin:20px;
+    padding:30px;
+}
+
+.familyPic{
+    height:200px;
+}
+
+h3{
+    font-size:2em;
+}
+
+#order{
+    position: relative;
+    text-align: center;
+}
+
+#sales{
+    position:relative;
+    text-align:center;
+    font-size: 1.3em;
+}
+
+
+footer{
+    position: absolute;;
+    top:1000px;
+    left:1300px;
+    background-color:none;
+    text-align: left;
+    animation: spin 8000ms linear infinite;
+}    
+@keyframes spin { 
+        from { 
+            transform: rotate(0deg); 
+        } to { 
+            transform: rotate(360deg); 
+        }
+    }
+footer>img{
+    width: 150px;
 }
