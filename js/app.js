@@ -27,7 +27,7 @@ Location.prototype.cookiesNum = function(timeList){
   for (var i = 0; i < timeList.length; i++){
     var newCookie = Math.floor((Math.random()*(this.maxGuest-this.minGuest) + this.minGuest) * this.avgCookies);
     this.cookiesNumArr.push(newCookie);
-    
+
   }
 
 };
@@ -79,7 +79,7 @@ var totalCookiesH = 0;
 var totalCookiesHArr=[];
 //for all the locations, how many cookies are sold hourly.
 function totalCookiesHrly(){
-    totalCookiesHArr = [];
+  totalCookiesHArr = [];
 
   for(var y=0; y < time.length; y++){
     totalCookiesH = 0;
@@ -107,7 +107,7 @@ function addFooter(){
 
     total += Location.listOfLocation[x].totalCookiesAdd;
     console.log(Location.listOfLocation[x].totalCookiesAdd,total);
-  } 
+  }
   cell= document.createElement('td');
   cell.textContent = total;
   tableFoot.appendChild(cell);

@@ -26,3 +26,10 @@ Create a form that takes in the parameters/properties'name and then update the t
 3. Validate the input data!
 4. update the total numbers in the footer.
 5. DRY the code by building functions for repeating codes.
+
+In the Thursday branch:
+style the facing page
+1. use all the pictures in assets file.
+2. Include some business infor like location(address), hours open, contact infor
+3. references like About Us, Merchandiese(sales of t-shirt, mugs, stckers..), salmon event in washington
+4. also use the similar style to the sales
