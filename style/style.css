@@ -89,6 +89,7 @@ a{
     top: 500px;
     border-style: dotted;
     border-color: whitesmoke;
+    position: fixed;
 }
 
 h2{
@@ -141,7 +142,7 @@ h3{
 footer{
     position: absolute;;
     top:1000px;
-    left:1300px;
+    left:0px;
     background-color:none;
     text-align: left;
     animation: spin 8000ms linear infinite;
@@ -161,5 +162,52 @@ table{
     position: relative;
     text-align: center;
     font-size:30px;
-    left: 40px;
+    left:20px;
+    border-style: dashed;
+    border-width: 8px;
+    border-color: white;
+    padding: 20px;
+}
+
+#tHeader{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#cookiesTable{
+    margin: 5px;
+    border: solid white 5px;
+}
+ 
+td{
+    border:dotted white 2px;
+}
+
+th{
+    padding: 3px;
+}
+
+.formPart{
+    position: relative;
+    margin: 60px;
+}
+
+form{
+    font-size: 1.5em;
+    width:100%;
+}
+
+fieldset{
+    border-color:white;
+}
+
+input{
+    font-size: 0.7em;
+    width: 260px;
+    margin:10px;
+}
+
+#submit{
+    width: 100px;
+    margin: 30px;
 }
